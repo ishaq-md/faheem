@@ -1,0 +1,35 @@
+#To list the compute instances
+gcloud compute instances list
+
+#To create compute instances
+gcloud compute instances create hello –zone=us-central1-c
+
+#To list the GCS buckets
+gsutil ls
+
+#To list the GCS buckets objects
+gsutil ls gs://xyz-bucket
+
+#To activate service account
+gcloud auth activate-service-account testlab@mi-uat-lab.iam.gserviceaccount.com --key-file=xyz.json
+
+#To create new Service Account
+gcloud iam service-accounts create helloworld
+
+#To list service account
+gcloud iam service-accounts list
+
+#To bind roles with SA account
+gcloud projects add-iam-policy-binding mi-uat-lab --member="serviceAccount:testlab@mi-uat-lab.iam.gserviceaccount.com" --role=roles/storage.objectViewer
+
+#To remove role from SA account
+gcloud projects remove-iam-policy-binding mi-uat-lab --member="serviceAccount:testlab@mi-uat-lab.iam.gserviceaccount.com"  --role=roles/storage.objectViewer
+
+#To create Json key
+gcloud iam service-accounts keys create key.json --iam-account=testlab@mi-uat-lab.iam.gserviceaccount.com
+
+#To list Json key
+gcloud iam service-accounts keys list --iam-account=testlab@mi-uat-lab.iam.gserviceaccount.com
+
+#To delete json key
+gcloud iam service-accounts keys create <KEY ID> --iam-account=testlab@mi-uat-lab.iam.gserviceaccount.com
