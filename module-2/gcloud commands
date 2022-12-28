@@ -2,7 +2,7 @@
 gcloud compute instances list
 
 #To create compute instances
-gcloud compute instances create hello –zone=us-central1-c
+gcloud compute instances create hello --zone=us-central1-c
 
 #To list the GCS buckets
 gsutil ls
