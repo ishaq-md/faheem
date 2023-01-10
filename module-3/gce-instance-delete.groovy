@@ -29,7 +29,7 @@ pipeline {
 	stage('Create Instance') {
 	 steps {
     
-    sh 'gcloud compute instances delete $VM_NAME --zone=$ZONES'
+    sh 'gcloud compute instances delete $VM_NAME --zone=$ZONES --quiet'
         
     }
     }
